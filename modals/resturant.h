@@ -54,5 +54,4 @@ class Resturant{
 };
 
 int Resturant::nextresturantId = 0;
-
 #endif
