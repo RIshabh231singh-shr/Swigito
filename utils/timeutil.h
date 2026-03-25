@@ -1,0 +1,24 @@
+#ifndef TIMEUTIL_H
+#define TIMEUTIL_H
+
+#include<iostream>
+#include<ctime>
+#include<string>
+using namespace std;
+
+
+class timeutil{
+    public:
+    static string getCurrentTime(){
+        time_t now = time(0);
+        char* dt = ctime(&now);
+        string s(dt);
+
+        if(!s.empty() && s.back() == '\n'){
+            s.pop_back();
+        }
+return s;
+    }
+};
+
+#endif
