@@ -19,9 +19,10 @@ class Resturant{
     vector<menuItems>menu;
 
     public : 
-    Resturant(string &name , string &address){
+    Resturant(string name , string address){
         this->name = name;
         this->address = address;
+        this->resturantId = ++nextresturantId;
     }
     //resturant ka destructor bnana jaruri hai ki ek baar agar resturant delete hua to sab uska delete ho jana chahiye
 
@@ -46,6 +47,9 @@ class Resturant{
     void setaddress(const string &a){
         if(a.empty()) return;
         address = a;
+    }
+    void addMenuItem(const menuItems &item) {
+        menu.push_back(item);
     }
 
     const vector<menuItems> getmenuItem() const{

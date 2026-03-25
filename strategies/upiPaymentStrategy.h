@@ -6,13 +6,11 @@
 #include "paymentStrategy.h"
 using namespace std;
 
-class upiPayment : public paymentStrategy{
+class UpiPaymentStrategy : public paymentStrategy{
     private:
         string mobile;
     public:
-        upiPayment(const string &mob){
-            mobile : mob;
-        }
+        UpiPaymentStrategy(const string &mob) : mobile(mob) {}
         void pay(int amount) override {
              cout << "Paid Rs" << amount << " using UPI (" << mobile << ")" << endl;
         }
